@@ -31,6 +31,8 @@ body {
     margin: 0;
 }
 
+
+
 .header-image {
     display: block;
     width: 30px;
@@ -60,11 +62,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     flex-basis: 80%;
     margin: 100px;
-    flex-grow: 1;
     padding-bottom: 20px;
+    flex-grow: 1;
 
 }
 
@@ -74,12 +75,11 @@ body {
 
 .search {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 20px;
     border-radius: 30px;
     border: 1px #eee solid;
     width: 520px;
-    height: 50px;
 }
 
 .search:hover {
@@ -97,6 +97,7 @@ body {
     margin-right: 5px;
     color: rgb(103, 152, 235);
     cursor: pointer;
+    padding-top: 15px;
 }
 
 .fa-keyboard {
@@ -104,19 +105,47 @@ body {
     margin-right: 15px;
     margin-left: 5px;
     cursor: pointer;
+    padding-top: 15px;
+
 }
 
 .fa-microphone {
     color: rgb(103, 152, 235);
     margin-right: 15px;
     cursor: pointer;
+    padding-top: 15px;
+
 }
 
-.search-input {
+/* .search-input {
     border: none;
+    outline: none;
     width: 450px;
     margin: 10px auto;
+} */
+
+.autocompleter {
+    width: 100%;
 }
+
+.autocompleter-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin: 15px auto;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    border-top: 1px #ddd solid;
+}
+
+tr:hover {
+    background-color: #eee;
+}
+
 
 .search-buttons {
     display: flex;
@@ -124,6 +153,7 @@ body {
     justify-content: center;
     height: 60px;
     width: 550px;
+
 }
 
 .button {
@@ -132,7 +162,7 @@ body {
     background-color: #eee;
     color: #888;
     border-style: none;
-    border-radius: 5%;
+    border-radius: 5px;
     cursor: pointer;
     border: 1px #fff solid;
 }
@@ -144,7 +174,9 @@ body {
 
 .footer {
     display: flex;
-    flex-basis: 10%;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
     background-color: #eee;
     flex-direction: column;
 }
